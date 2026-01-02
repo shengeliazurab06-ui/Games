@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Medieval-Defence</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="pictures/Logo.png">
+</head>
+<body>
+    <div id="game-wrapper">
+        <div id="canvas-container">
+            <canvas id="gameCanvas"></canvas>
+            
+            <div id="loading-screen">
+                <h1>LOADING KINGDOM...</h1>
+                <div id="loading-bar-container">
+                    <div id="loading-bar"></div>
+                </div>
+                <button id="enter-btn" style="display:none;">ENTER KINGDOM</button>
+            </div>
+
+            <div id="bottom-action-bar">
+
+            </div>
+        </div>
+
+        <button id="side-panel-toggle" onclick="toggleSidePanel()">☰</button>
+
+        <div id="side-panel">
+            <div class="panel-header">
+                <h2 id="panel-title">KINGDOM</h2>
+            </div>
+
+            <div class="scroll-content">
+    
+                <div id="dynamic-side-content"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+body {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container { 
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+#status {
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.board-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: center;
+}
+
+.captured-area {
+    width: 60px;
+    min-height: 600px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    border: 2px solid #4a3020;
+}
+
+
+#chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 75px);
+    grid-template-rows: repeat(8, 75px);
+    border: 12px solid #4a3020;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.square {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.captured-piece {
+    font-size: 35px;
+    line-height: 1;
+}
+
+.white { background-color: #E8D0AA; color: black; }
+.black { background-color: #A67C52; color: black; }
+.selected { background-color: #f7ec59 !important; }
+.highlight { background-color: #d4c348 !important; }
+
+.move-hint {
+    width: 25px;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+.capture-hint {
+    box-shadow: inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+select {
+    padding: 10px;
+    background: #4a3020;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+button {
+    padding: 10px 20px;
+    background: #4a3020;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.1s, background 0.2s;
+}
+
+button:hover {
+    background: #6d4c35;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}

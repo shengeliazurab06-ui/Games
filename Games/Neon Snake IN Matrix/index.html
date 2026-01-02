@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Snake in Matrix</title>
+    <link rel="icon" href="pictures/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-wrapper">
+        <img src="pictures/logo.png" alt="Logo" class="game-logo">
+        <div class="header">
+            <div class="score-box"><span data-lang="score">ქულა</span>: <span id="score">0</span></div>
+            <div class="high-score"><span data-lang="highScore">რეკორდი</span>: <span id="highScore">0</span></div>
+        </div>
+        
+        <div class="canvas-container">
+            <canvas id="gameCanvas" width="500" height="500"></canvas>
+            
+            <div id="invincibilityContainer" class="invincibility-container hidden">
+                <div id="invincibilityBar" class="invincibility-bar"></div>
+            </div>
+            <div id="comboDisplay" class="combo-display hidden">x1</div>
+            <div id="notificationArea" class="notification-area"></div>
+
+            <div id="gameOverlay" class="overlay hidden">
+                <h2 id="overlayTitle" data-lang="gameOver">თამაში დასრულდა</h2>
+                <p><span data-lang="score">ქულა</span>: <span id="overlayScore">0</span></p>
+                <button id="restartBtn" data-lang="restart">თავიდან დაწყება</button>
+            </div>
+            <div id="pauseOverlay" class="overlay hidden">
+                <h2 data-lang="pause">პაუზა</h2>
+                <button id="resumeBtn" data-lang="resume">გაგრძელება</button>
+            </div>
+            <div id="settingsOverlay" class="overlay hidden">
+                <h2 data-lang="settings">პარამეტრები</h2>
+                <div class="setting-group">
+                    <label><span data-lang="language">ენა</span>: 
+                        <select id="languageSelect">
+                            <option value="en">English</option>
+                            <option value="ka">ქართული</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="setting-group">
+                    <label><span data-lang="sound">ხმა</span>: <input type="checkbox" id="soundToggle" checked></label>
+                </div>
+                <div class="setting-group">
+                    <label><span data-lang="difficulty">სირთულე</span>: </label>
+                    <select id="difficultySelect">
+                        <option value="easy" data-lang="easy">ადვილი</option>
+                        <option value="medium" selected data-lang="medium">საშუალო</option>
+                        <option value="hard" data-lang="hard">რთული</option>
+                    </select>
+                </div>
+                <button id="closeSettingsBtn" data-lang="save">შენახვა</button>
+            </div>
+            <div id="achievementsOverlay" class="overlay hidden">
+                <h2 data-lang="achievements">მიღწევები</h2>
+                <div id="achievementsList" class="achievements-list"></div>
+                <button id="closeAchievementsBtn" data-lang="close">დახურვა</button>
+            </div>
+            <div id="shopOverlay" class="overlay hidden">
+                <h2 data-lang="shop">მაღაზია</h2>
+                <div id="shopList" class="shop-list"></div>
+                <button id="closeShopBtn" data-lang="close">დახურვა</button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="pauseBtn" data-lang="pause">პაუზა</button>
+            <button id="settingsBtn" data-lang="settings">პარამეტრები</button>
+            <button id="shopBtn" data-lang="shop">მაღაზია</button>
+            <button id="achievementsBtn" data-lang="achievements">მიღწევები</button>
+        </div>
+    </div>
+
+    <div class="instructions" data-lang="instructions">გამოიყენეთ ისრები (Arrow Keys) სამართავად</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

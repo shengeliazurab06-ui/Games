@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>King Chess</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="pictures/Logo.jpg">
+</head>
+<body>
+    <div class="game-container">
+        <h2 id="status">Game Started! Your Turn</h2>
+        <div class="board-layout">
+            <div id="captured-white" class="captured-area"></div>
+            <div id="chessboard"></div>
+            <div id="captured-black" class="captured-area"></div>
+        </div>
+        <div class="controls">
+            <select id="difficulty" onchange="setDifficulty(this.value)">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard" selected>Hard</option>
+            </select>
+            <button onclick="undoMove()">Undo Move</button>
+            <button id="restartBtn" onclick="location.reload()">Restart Game</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
