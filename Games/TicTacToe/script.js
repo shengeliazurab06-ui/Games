@@ -188,7 +188,6 @@ function initializeGame() {
     undoBtn.addEventListener("click", undoMove);
     replayBtn.addEventListener("click", replayGame);
 
-    // Modal Event Listeners
     rulesBtn.addEventListener("click", () => rulesModal.classList.add("active"));
     closeRulesBtn.addEventListener("click", () => rulesModal.classList.remove("active"));
     window.addEventListener("click", (e) => { if (e.target === rulesModal) rulesModal.classList.remove("active"); });
@@ -528,3 +527,4 @@ window.addEventListener('resize', () => {
 });
 
 initializeGame();
+
