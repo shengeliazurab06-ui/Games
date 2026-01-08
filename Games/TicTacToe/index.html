@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Tic Tac Toe</title>
+    <link rel="icon" type="image/jpg" href="pictures/logo.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="introOverlay" class="intro-overlay">
+        <div class="intro-content">
+            <h1 class="intro-title cyber-glitch" data-text="NEON PROTOCOL">NEON PROTOCOL</h1>
+            <p class="intro-subtitle">INITIALIZING AI SYSTEMS...</p>
+            <button id="startGameBtn" class="intro-btn">INITIALIZE LINK</button>
+        </div>
+    </div>
+
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeRulesBtn">&times;</button>
+            <h2 style="margin-top:0; color:var(--neon-blue);">HOW TO PLAY</h2>
+            <p>1. Select your difficulty and theme.</p>
+            <p>2. You are <strong>Player X</strong>. The Bot is <strong>Player O</strong>.</p>
+            <p>3. Get 3 marks in a row, column, or diagonal to win.</p>
+            <p>4. <strong>Hard Mode</strong> uses Minimax AI and is unbeatable!</p>
+        </div>
+    </div>
+
+    <canvas id="particleCanvas"></canvas>
+    <div class="game-container">
+        <div class="header-container">
+            <h1 class="cyber-glitch" data-text="NEON TIC TAC TOE">NEON TIC TAC TOE</h1>
+        </div>
+        
+        <div class="scoreboard">
+            <div class="score-box player">
+                <span class="label">PLAYER</span>
+                <span id="scorePlayer" class="value">0</span>
+            </div>
+            <div class="score-box draw">
+                <span class="label">DRAW</span>
+                <span id="scoreDraw" class="value">0</span>
+            </div>
+            <div class="score-box bot">
+                <span class="label">BOT</span>
+                <span id="scoreBot" class="value">0</span>
+            </div>
+        </div>
+
+        <div class="theme-selection">
+            <select id="themeSelect">
+                <option value="neon">Theme: Neon Cyber</option>
+                <option value="dark">Theme: Dark Minimal</option>
+                <option value="light">Theme: Light Clean</option>
+                <option value="retro">Theme: Retro 80s</option>
+                <option value="medieval">Theme: Medieval</option>
+                <option value="fantasy">Theme: Fantasy</option>
+                <option value="scifi">Theme: Sci-Fi Space</option>
+                <option value="nature">Theme: Nature Forest</option>
+                <option value="halloween">Theme: Halloween Spooky</option>
+                <option value="christmas">Theme: Holiday Winter</option>
+            </select>
+        </div>
+
+        <div class="controls">
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <button id="undoBtn">UNDO</button>
+            <button id="replayBtn" style="display:none;">REPLAY</button>
+            <button id="rulesBtn">RULES</button>
+            <button id="restartBtn">REBOOT SYSTEM</button>
+        </div>
+
+        <div class="board-wrapper">
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div><div class="cell" data-index="1"></div><div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div><div class="cell" data-index="4"></div><div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div><div class="cell" data-index="7"></div><div class="cell" data-index="8"></div>
+            </div>
+        </div>
+
+        <p id="status" class="status-text">INITIALIZING...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
