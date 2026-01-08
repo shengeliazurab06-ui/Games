@@ -17,7 +17,7 @@ A strategy game where you defend your base.
 * **Focus:** Enemy waves and combat.
 * **Goal:** Stopping enemies from reaching your castle.
 
-## 🎮 4. Ultimate Tic-Tac-Toe
+## 🎮 4. Neon Tic-Tac-Toe
 A feature-rich Tic-Tac-Toe game with AI and multiple themes.
 
 * **Focus:** Responsive design, Neon Logo, AI improvements, animations, and sound.
