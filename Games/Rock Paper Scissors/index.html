@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="icon" type="image/png" href="Images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="settings-btn" class="icon-btn">⚙️</button>
+
+    <h1>Rock Paper Scissors</h1>
+
+    <div class="score-board">
+        <div class="score-box">
+            <p>Your Score: <span id="player-score">0</span></p>
+            <div class="progress-container">
+                <div id="player-progress" class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="score-box">
+            <p>Enemy: <span id="computer-score">0</span></p>
+            <div class="progress-container">
+                <div id="computer-progress" class="progress-bar computer"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="result-banner" class="banner">Get Ready!</div>
+
+    <p id="computer-choice-text" class="choice-display">Make your move</p>
+
+    <div class="choices">
+        <div class="choice" onclick="play('rock')" id="choice-rock">
+            <img src="Images/Rock.png" alt="Rock" class="icon">
+            <p>Rock</p>
+        </div>
+        <div class="choice" onclick="play('paper')" id="choice-paper">
+            <img src="Images/Paper.png" alt="Paper" class="icon">
+            <p>Paper</p>
+        </div>
+        <div class="choice" onclick="play('scissors')" id="choice-scissors">
+            <img src="Images/Scissors.png" alt="Scissors" class="icon">
+            <p>Scissors</p>
+        </div>
+    </div>
+
+    <button class="reset-btn" onclick="resetGame()">Reset Game</button>
+
+    <div class="history-container">
+        <h3>Last 5 Games</h3>
+        <ul id="history-list"></ul>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <button id="close-modal-btn" class="close-btn">&times;</button>
+            <h2>Settings</h2>
+            <div class="setting-item">
+                <label>Sounds</label>
+                <button id="sound-toggle-btn" class="setting-btn">🔊</button>
+            </div>
+            <div class="setting-item">
+                <label>Theme</label>
+                <button id="theme-toggle-btn" class="setting-btn">🌙</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="instructions-modal" class="modal">
+        <div class="modal-content" style="text-align: center;">
+            <h2>How to Play</h2>
+            <p style="font-size: 1.2rem; margin: 15px 0;">✊ Rock beats Scissors ✌️</p>
+            <p style="font-size: 1.2rem; margin: 15px 0;">✋ Paper beats Rock ✊</p>
+            <p style="font-size: 1.2rem; margin: 15px 0;">✌️ Scissors beats Paper ✋</p>
+            <button id="start-game-btn" class="reset-btn" style="margin-top: 20px; width: 100%; padding: 12px; font-size: 1rem;">Got it!</button>
+        </div>
+    </div>
+
+    <div id="game-over-modal" class="modal">
+        <div class="modal-content" style="text-align: center;">
+            <h2 id="game-over-title">Game Over</h2>
+            <p id="game-over-message" style="font-size: 1.2rem; margin: 15px 0;"></p>
+            <button onclick="resetGame()" class="reset-btn" style="margin-top: 20px; width: 100%; padding: 12px; font-size: 1rem;">Play Again</button>
+        </div>
+    </div>
+
+    <audio id="win-sound" src="Sounds/Win.mp3"></audio>
+    <audio id="lose-sound" src="Sounds/Lose.mp3"></audio>
+    <audio id="click-sound" src="sounds/Click.mp3"></audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
