@@ -26,7 +26,7 @@ A feature-rich Tic-Tac-Toe game with AI and multiple themes.
 * **Focus:** Responsive design, Neon Logo, AI improvements, animations, and sound.
 * **Goal:** Provide an engaging, mobile-friendly Tic-Tac-Toe experience with scores, replay, and customizable themes.
 
-## ✊✋✌️ Rock Paper Scissors
+## ✊✋✌️5. Rock Paper Scissors
 
 A classic Rock Paper Scissors game built for the browser.
 
