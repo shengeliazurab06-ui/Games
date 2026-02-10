@@ -33,6 +33,14 @@ A classic Rock Paper Scissors game built for the browser.
 * **Focus:** Game logic and user interaction.
 * **Goal:** Let the player compete against the computer with instant results.
 
+## 🎯 6. Battleship Game
+
+A classic Battleship game with drag & drop ship placement, radar, and sound effects.
+
+Focus:
+* **Focus:** Player vs computer gameplay, ship placement (manual or random), turn-based combat, radar usage, and sound feedback.
+
+* **Goal:** Sink all enemy ships before they sink yours, track stats (wins, losses, accuracy), and enjoy an interactive, visually appealing grid-based naval battle.
 ---
 
 ## 🛠️ Skills I Used
