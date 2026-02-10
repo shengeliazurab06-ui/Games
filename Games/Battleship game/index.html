@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship Game</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Battleship</h1>
+        
+        <div class="info-panel">
+            <div id="status-text">Place your ships! Drag & Drop or Randomize.</div>
+        </div>
+        <div class="score-board">
+            <div id="turn-indicator">Setup Phase</div>
+            <div id="timer" class="hidden">Time: 10</div>
+        </div>
+
+        <div class="game-area">
+            <div class="board-section">
+                <h2>Player Board</h2>
+                <div id="player-board" class="grid"></div>
+            </div>
+            <div class="board-section">
+                <h2>Enemy Board</h2>
+                <div id="enemy-board" class="grid"></div>
+            </div>
+        </div>
+
+        <div id="setup-controls">
+            <div id="ship-dock"></div>
+            <div class="buttons">
+                <button id="rotate-btn">Rotate: Horizontal</button>
+                <select id="difficulty-select" style="padding: 10px; border-radius: 25px; border: none; background: linear-gradient(135deg, #00c6ff, #0072ff); color: white; cursor: pointer; font-size: 1rem; box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);">
+                    <option value="easy" style="color: black;">Easy</option>
+                    <option value="medium" selected style="color: black;">Medium</option>
+                    <option value="hard" style="color: black;">Hard</option>
+                </select>
+                <button id="randomize-btn">Randomize Ships</button>
+                <button id="start-btn" disabled>Start Game</button>
+                <button id="sound-btn">🔊 Sound: On</button>
+            </div>
+        </div>
+
+        <div id="game-controls" class="hidden">
+            <button id="restart-btn">Restart Game</button>
+            <button id="radar-btn">📡 Radar (1 use)</button>
+            <button id="stats-btn">📊 Stats</button>
+        </div>
+
+
+        <div id="audio-assets" style="display: none;">
+            <audio id="bg-music" src="audios/Song.mp3" loop autoplay></audio>
+            <audio id="snd-hit" src="audios/hit.mp3"></audio>
+            <audio id="snd-miss" src="audios/miss.mp3"></audio>
+            <audio id="snd-sunk" src="audios/sunk.mp3"></audio>
+            <audio id="snd-shoot" src="audios/shoot.mp3"></audio>
+            <audio id="snd-win" src="audios/win.mp3"></audio>
+            <audio id="snd-lose" src="audios/lose.mp3"></audio>
+        </div>
+
+        <div id="stats-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Player Statistics</h2>
+                <p>Wins: <span id="stat-wins">0</span></p>
+                <p>Losses: <span id="stat-losses">0</span></p>
+                <p>Accuracy: <span id="stat-accuracy">0%</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
