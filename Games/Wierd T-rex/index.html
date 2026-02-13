@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wierd T-Rex </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div class="ui-container">
+            <div class="score-board">
+                <span>HI <span id="highScoreValue">00000</span></span>
+                <span id="scoreValue">00000</span>
+            </div>
+            <button id="settingsBtn" class="icon-btn">⚙️</button>
+        </div>
+
+        <div class="game-over-screen">
+            <h1>GAME OVER</h1>
+            <p id="restartText">Press Space to Restart</p>
+            <div class="leaderboard">
+                <h3>Leaderboard</h3>
+                <ul id="leaderboardList"></ul>
+            </div>
+        </div>
+
+        <div id="settingsMenu" class="settings-menu">
+            <button id="soundBtn">🔊 SOUND: ON</button>
+            <button id="menuShopBtn">🛒 SHOP</button>
+            <button id="menuAchieveBtn">🏆 ACHIEVEMENTS</button>
+        </div>
+
+        <div id="shopModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>SKIN SHOP</h2>
+                    <button id="closeShopBtn" class="close-btn">&times;</button>
+                </div>
+                <div class="wallet-display">Balance: <span id="shopBalance">0</span> 💰</div>
+                <div id="shopGrid" class="shop-grid"></div>
+            </div>
+        </div>
+
+        <div id="achieveModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>ACHIEVEMENTS</h2>
+                    <button id="closeAchieveBtn" class="close-btn">&times;</button>
+                </div>
+                <div id="achieveGrid" class="achieve-grid"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
