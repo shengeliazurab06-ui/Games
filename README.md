@@ -46,8 +46,7 @@ A classic Battleship game with drag & drop ship placement, radar, and sound effe
 An endless runner game where you control a T-Rex running through a desert filled with cactuses and flying Pteranodons.
 
 
-* **Focus:** Smooth gameplay, gradual speed increase, obstacles spawning dynamically, and player interaction with ducking and jumping.
-  
+* **Focus:** Smooth gameplay, gradual speed increase, obstacles spawning dynamically, and player interaction with ducking and jumping. 
 * **Goal:**  Survive as long as possible while avoiding obstacles, collect points, and enjoy a visually appealing, aesthetic environment with stylized backgrounds and characters.
 
 ---
